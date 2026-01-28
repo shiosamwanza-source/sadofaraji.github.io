@@ -1,3 +1,7 @@
+---
+layout: default
+title: Sado Faraji | Author of Power, Memory, and Resistance
+---
 <footer class="footer">
   <p>© 2026 Sado Faraji — All Rights Reserved</p>
   <p>
