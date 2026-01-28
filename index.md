@@ -103,3 +103,9 @@ For serious correspondence only:
 ---
 
 *I write about how power turns belief into obedience—and why resistance keeps returning.*
+<h3>Elsewhere</h3>
+<p>
+  <a href="#">Amazon Author Page (coming soon)</a><br>
+  <a href="#">Goodreads (coming soon)</a><br>
+  <a href="#">Twitter / X (coming soon)</a>
+</p>
