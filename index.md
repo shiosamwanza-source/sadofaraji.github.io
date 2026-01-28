@@ -109,3 +109,4 @@ For serious correspondence only:
   <a href="#">Goodreads (coming soon)</a><br>
   <a href="#">Twitter / X (coming soon)</a>
 </p>
+**Author | Political Thought | Historical Memory | Epic Fiction**
