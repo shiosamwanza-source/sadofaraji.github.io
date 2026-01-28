@@ -10,6 +10,7 @@ title: Sado Faraji | Author of Power, Memory, and Resistance
   <p><em>Writing where belief meets power, and resistance refuses to disappear.</em></p>
 </footer>
 <link rel="stylesheet" href="/assets/css/style.css">
+<meta name="description" content="Official website of Sado Faraji, author exploring power, belief, resistance, history, and epic fiction shaped by moral and political thought.">
 ---
 layout: default
 ---
