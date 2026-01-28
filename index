@@ -2,7 +2,12 @@
 layout: default
 ---
 <link rel="stylesheet" href="/assets/css/style.css">
-
+<nav class="menu">
+  <a href="/">Home</a>
+  <a href="/books.html">Books</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Contact</a>
+</nav>
 # Sado Faraji
 <img src="images/sado.jpg" alt="Sado Faraji" class="author-photo">
 Writer on power, belief, obedience, and resistance.
