@@ -1,3 +1,4 @@
+**Author of Power, Memory, Resistance, and Moral Imagination**
 ---
 layout: default
 title: Sado Faraji | Author of Power, Memory, and Resistance
