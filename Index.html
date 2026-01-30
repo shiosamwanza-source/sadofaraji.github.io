@@ -5,52 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sado Faraji — Books & Writings</title>
 
-  <!-- SEO -->
+  <!-- SEO Meta Tags -->
   <meta name="description" content="Books and essays by Sado Faraji. Literary works exploring power, desire, silence, and the unseen structures of the self." />
   <meta name="author" content="Sado Faraji" />
+  <meta name="keywords" content="Sado Faraji, books, essays, Swahili literature, African writers, literary works" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sadofaraji.com/" />
+  <meta property="og:title" content="Sado Faraji — Books & Writings" />
+  <meta property="og:description" content="Literary works exploring power, desire, silence, and the unseen structures of the self." />
+  <meta property="og:image" content="https://sadofaraji.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://sadofaraji.com/" />
+  <meta name="twitter:title" content="Sado Faraji — Books & Writings" />
+  <meta name="twitter:description" content="Literary works exploring power, desire, silence, and the unseen structures of the self." />
+  <meta name="twitter:image" content="https://sadofaraji.com/twitter-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sadofaraji.com/" />
 
   <style>
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #0f0f12;
-      color: #eaeaea;
-      margin: 0;
-      line-height: 1.75;
+    /* CSS Variables for easy theming */
+    :root {
+      --bg-primary: #0f0f12;
+      --text-primary: #eaeaea;
+      --text-secondary: #b5b5b5;
+      --text-muted: #888;
+      --accent-blue: #9fd3ff;
+      --accent-blue-hover: #7ab8e8;
+      --border-color: #222;
+      --border-accent: #555;
     }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Header Styles */
     header {
       padding: 3rem 1.5rem;
       text-align: center;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid var(--border-color);
+      animation: fadeIn 0.8s ease-in;
     }
 
     header h1 {
       font-size: 2.4rem;
       margin-bottom: 0.4rem;
+      font-weight: 400;
     }
 
     header p {
       max-width: 720px;
       margin: auto;
-      color: #b5b5b5;
+      color: var(--text-secondary);
       font-size: 1.05rem;
     }
 
+    /* Navigation */
     nav {
       margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     nav a {
-      color: #eaeaea;
+      color: var(--text-primary);
       text-decoration: none;
       margin: 0 1rem;
       font-size: 0.95rem;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      border-bottom-color: var(--accent-blue);
+      color: var(--accent-blue);
     }
 
+    nav a:focus {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    /* Main Content */
     main {
       max-width: 900px;
       margin: auto;
@@ -59,39 +123,173 @@
 
     section {
       margin-bottom: 3.5rem;
+      animation: fadeInUp 0.6s ease-in;
     }
 
     h2 {
       font-size: 1.6rem;
       margin-bottom: 1rem;
-      border-left: 4px solid #555;
+      border-left: 4px solid var(--border-accent);
       padding-left: 0.6rem;
+      font-weight: 400;
     }
 
     .excerpt {
       font-style: italic;
       color: #cfcfcf;
       max-width: 760px;
+      margin-bottom: 1rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 1rem;
     }
 
     .read-more {
       display: inline-block;
-      margin-top: 0.8rem;
-      color: #9fd3ff;
+      color: var(--accent-blue);
       text-decoration: none;
       font-size: 0.95rem;
+      transition: all 0.3s ease;
+      width: fit-content;
     }
 
     .read-more:hover {
+      color: var(--accent-blue-hover);
+      transform: translateX(4px);
       text-decoration: underline;
     }
 
+    .read-more:focus {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    /* External link indicator */
+    a[target="_blank"]::after {
+      content: " ↗";
+      font-size: 0.8em;
+      opacity: 0.7;
+    }
+
+    /* Footer */
     footer {
-      border-top: 1px solid #222;
-      padding: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 1.5rem;
       text-align: center;
       font-size: 0.85rem;
-      color: #888;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--accent-blue-hover);
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      header p {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+      }
+      
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      
+      nav a {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+      }
+
+      nav a:hover {
+        border-color: var(--accent-blue);
+        background: rgba(159, 211, 255, 0.05);
+      }
+      
+      main {
+        padding: 2rem 1rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      section {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 2rem 1rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      nav, footer {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -105,10 +303,10 @@
     silence, and the hidden structures beneath language.
   </p>
 
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <a href="books.html">Books</a>
-    <a href="essay">Essays</a>
-    <a href="swahili.md">Swahili Works</a>
+    <a href="essays.html">Essays</a>
+    <a href="swahili.html">Swahili Works</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -117,14 +315,14 @@
 <main>
 
   <!-- Books section -->
-  <section>
-    <h2>📚 Books</h2>
+  <section aria-labelledby="books-heading">
+    <h2 id="books-heading">📚 Books</h2>
     <p class="excerpt">
       My published books are available internationally. 
       Explore editions, platforms, and purchase options through the link below.
     </p>
     <div class="links">
-      <a class="read-more" href="https://books2read.com/ap/xy0Abp/Sado-Faraji" target="_blank">
+      <a class="read-more" href="https://books2read.com/ap/xy0Abp/Sado-Faraji" target="_blank" rel="noopener noreferrer">
         → Find my books on Books2Read
       </a>
       <a class="read-more" href="books.html">
@@ -134,35 +332,54 @@
   </section>
 
   <!-- Essays section -->
-  <section>
-    <h2>✍️ Essays & Longform Writing</h2>
+  <section aria-labelledby="essays-heading">
+    <h2 id="essays-heading">✍️ Essays & Longform Writing</h2>
     <p class="excerpt">
       Essays exploring society, authority, intimacy, fear,
       and the structures that shape how we speak and remain silent.
     </p>
     <div class="links">
-      <a class="read-more" href="essay">→ Read essays</a>
+      <a class="read-more" href="essays.html">→ Read essays</a>
     </div>
   </section>
 
   <!-- Swahili works section -->
-  <section>
-    <h2>🌍 Selected Swahili Works</h2>
+  <section aria-labelledby="swahili-heading">
+    <h2 id="swahili-heading">🌍 Selected Swahili Works</h2>
     <p class="excerpt">
       A small selection of writings in Kiswahili, preserved in their original voice, rhythm, and power.
     </p>
     <div class="links">
-      <a class="read-more" href="swahili.md">→ Read Swahili writings</a>
+      <a class="read-more" href="swahili.html">→ Read Swahili writings</a>
     </div>
   </section>
 
 </main>
 
 <footer>
-  © 2026 — Sado Faraji · All rights reserved  
-  <br />
-  <small>sadofaraji@proton.me</small>
+  <p>
+    © 2025 — Sado Faraji · All rights reserved
+  </p>
+  <p style="margin-top: 0.5rem;">
+    <a href="mailto:sadofaraji@proton.me">sadofaraji@proton.me</a>
+  </p>
 </footer>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sado Faraji",
+  "jobTitle": "Author",
+  "url": "https://sadofaraji.com",
+  "email": "sadofaraji@proton.me",
+  "sameAs": [
+    "https://books2read.com/ap/xy0Abp/Sado-Faraji"
+  ],
+  "description": "Author of books and essays exploring power, desire, silence, and the unseen structures of the self."
+}
+</script>
 
 </body>
 </html>
